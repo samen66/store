@@ -13,24 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/main', function () {
-    return view('main');
-});
+Route::get('/', 'MainController@index');
+Route::get('/products','MainController@products');
+Route::get('/basket','MainController@basket');
+Route::get('/checkout','MainController@checkout');
+Route::get('/product','MainController@product');
+Route::get('/categories','MainController@categories');
+Route::get('/login','MainController@login');
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-
-Route::get('/login', function () {
-    return view('auth.login');
-});
-Route::get('/basket', function () {
-    return view('basket');
-});
